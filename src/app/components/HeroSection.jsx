@@ -6,6 +6,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const HeroSection = () => {
+  const handleClick = async () => {
+    const response = await fetch("/api/file");
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "cv.pdf";
+    link.click();
+    window.URL.revokeObjectURL(url);
+  };
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -42,9 +52,17 @@ const HeroSection = () => {
               href="/"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
+              {/* <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2"> */}
+              {/* Download CV */}
+              {/* </span> */}
+
+              <button
+                type="button"
+                onClick={handleClick}
+                className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2"
+              >
+                Download
+              </button>
             </Link>
           </div>
         </motion.div>
