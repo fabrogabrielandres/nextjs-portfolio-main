@@ -1,14 +1,3 @@
-// export async function GET() {
-//   const buffer = Buffer.from('hello world', 'utf8');
-//   const headers = new Headers();
-//   headers.append('Content-Disposition', 'attachment; filename="filename.txt"');
-//   headers.append('Content-Type', 'application/text');
-
-//   return new Response(buffer, {
-//     headers,
-//   });
-// }
-
 import { readFile } from "fs/promises";
 import path from "path";
 
