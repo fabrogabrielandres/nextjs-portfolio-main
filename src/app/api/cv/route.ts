@@ -9,10 +9,8 @@ export async function GET() {
   const headers = new Headers();
   headers.append("Content-Disposition", 'attachment; filename="cv.pdf"');
   headers.append("Content-Type", "pdf");
-
-  console.log("hola descargha");
   console.log(buffer);
-  
+
   return new Response(buffer, {
     headers,
   });

@@ -7,12 +7,12 @@ import Link from "next/link";
 
 const HeroSection = () => {
   const handleClick = async () => {
-    const response = await fetch("/api/file");
+    const response = await fetch("/api/cv");
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "cv.pdf";
+    link.download = "Cv_FabroGabriel.pdf";
     link.click();
     window.URL.revokeObjectURL(url);
   };

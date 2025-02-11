@@ -8,13 +8,25 @@ const projectsData = [
   {
     id: 1,
     title: "E-commerce Application",
-    description: "Developed a scalable, high-performance e-commerce platform using Next.js 14, leveraging Server Components and Server Side Rendering (SSR) to optimize speed and SEO. I integrated a secure payment gateway and managed real-time inventory updates for a seamless shopping experience and implemented advanced SEO strategies, such as dynamic metatags and optimized paths, to improve search engine visibility.",
+    description:
+      "Developed a scalable, high-performance e-commerce platform using Next.js 14, leveraging Server Components and Server Side Rendering (SSR) to optimize speed and SEO. I integrated a secure payment gateway and managed real-time inventory updates for a seamless shopping experience and implemented advanced SEO strategies, such as dynamic metatags and optimized paths, to improve search engine visibility.",
     image: "/images/projects/1.png",
     tag: ["All", "React/Next"],
     gitUrl: "https://github.com/fabrogabrielandres/osloshop",
     previewUrl: "https://osloshop-test.vercel.app/",
+    download: false,
   },
-  
+];
+const companiesData = [
+  {
+    gitUrl: "https://www.piranirisk.com/en/",
+    previewUrl: "https://www.piranirisk.com/en/",
+    id: 2,
+    title: "Pirani",
+    description: "Period 02-2021 02-2023",
+    image: "/images/projects/2.png",
+    download: true,
+  },
 ];
 
 const ProjectsSection = () => {
@@ -75,6 +87,25 @@ const ProjectsSection = () => {
               previewUrl={project.previewUrl}
             />
           </motion.li>
+        ))}
+      </ul>
+
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+        Reference
+      </h2>
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {companiesData.map((project, index) => (
+          <>
+            <ProjectCard
+              key={project.id}
+              title={project.title ?? ""}
+              description={project.description ? project.description : [""]}
+              imgUrl={project.image ?? ""}
+              gitUrl={project.gitUrl ?? ""}
+              previewUrl={project.previewUrl}
+              download={project.download}
+            />
+          </>
         ))}
       </ul>
     </section>
