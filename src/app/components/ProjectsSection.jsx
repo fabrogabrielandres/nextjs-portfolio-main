@@ -15,13 +15,27 @@ const projectsData = [
     gitUrl: "https://github.com/fabrogabrielandres/osloshop",
     previewUrl: "https://osloshop-test.vercel.app/",
     download: false,
+    showVideoModalIcon: false,
+    videoUrl: "primero ",
+  },
+  {
+    id: 2,
+    title: "Oslocase: Modern E-Commerce for Custom Phone Cases",
+    description:"Oslocase is a full-stack e-commerce platform designed to deliver a seamless experience for customizing and purchasing personalized phone cases. Built with Next.js (App Router), React Query, Tailwind CSS, and shadcn UI, the app prioritizes performance, responsive design, and intuitive usability.",
+    image: "/images/projects/oslocase.png",
+    tag: ["All", "React/Next"],
+    gitUrl: "https://github.com/fabrogabrielandres/oslocase",
+    previewUrl: "https://oslocase.vercel.app/",
+    download: false,
+    showVideoModalIcon: true,
+    videoUrl: "/images/projects/oslocase.mp4",
   },
 ];
 const companiesData = [
   {
     gitUrl: "https://www.piranirisk.com/en/",
     previewUrl: "https://www.piranirisk.com/en/",
-    id: 2,
+    id: 3,
     title: "Pirani",
     description: "Period 02-2021 02-2023",
     image: "/images/projects/2.png",
@@ -85,6 +99,8 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              showVideoModalIcon={project.showVideoModalIcon}
+              videoUrl={project.videoUrl}
             />
           </motion.li>
         ))}
