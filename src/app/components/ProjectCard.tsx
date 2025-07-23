@@ -28,16 +28,7 @@ const ProjectCard = ({
     link.click();
     window.URL.revokeObjectURL(url);
   };
-  console.log({
-    imgUrl,
-    title,
-    description,
-    gitUrl,
-    previewUrl,
-    download,
-    showVideoModalIcon,
-    videoUrl,
-  });
+
   const [showModal, setShowModal] = useState(false);
 
   return (
