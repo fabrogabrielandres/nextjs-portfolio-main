@@ -68,7 +68,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a Frontend Developer with 2 years of experience in designing
+            I am a Frontend Developer with 3 years of experience in designing
             and developing dynamic and responsive user interfaces. My expertise
             lies in using modern technologies such as Angular and React, with
             which I have built efficient, scalable, and user-centered web
